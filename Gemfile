@@ -7,6 +7,12 @@ gem 'rails', '3.1.3'
 
 gem 'sqlite3'
 
+group :development, :test do
+	gem "rspec-rails", ">= 2.0.0"
+	gem "cucumber-rails", ">= 0.3.2"
+	gem "webrat", ">= 0.7.2"
+end
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -32,5 +38,6 @@ gem 'jquery-rails'
 
 group :test do
   # Pretty printed test output
+  gem "database_cleaner", "~> 0.6.7"
   gem 'turn', '0.8.2', :require => false
 end
